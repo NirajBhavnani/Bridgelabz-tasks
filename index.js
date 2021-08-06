@@ -18,3 +18,10 @@ function strReverse(string){
     }
     return newStr;
 }
+
+//2.Print numbers from 1 to 10
+var nums = "";
+for(var i=1; i<=10; i+=1){
+    nums += i + " ";
+}
+console.log(nums);
