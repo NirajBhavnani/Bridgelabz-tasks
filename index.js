@@ -77,3 +77,13 @@ function getArr(sample){
     }
     return newArr;
 }
+
+//9.Find the maximum number in an array of numbers
+var maxArr = [20, 35, 49, 58, 76];
+var max = maxArr[0];
+for(x in maxArr){
+    if(max < maxArr[x]){
+        max = maxArr[x];
+    }
+}
+console.log(max);
