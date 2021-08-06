@@ -55,3 +55,11 @@ function convertCelToFahr(number){
     let Fahrenheit = number * 1.8 + 32;
     return Fahrenheit;
 }
+
+//7.Calculate the sum of numbers in an array of numbers
+var numArr = [10, 20, 30, 40];
+var sum = 0;
+for(var num in numArr){
+    sum = sum + numArr[num];
+}
+console.log(sum);
