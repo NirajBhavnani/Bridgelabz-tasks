@@ -47,3 +47,11 @@ for(var i=10; i>=1; i-=1){
     fact = fact * i;
 }
 console.log(fact);
+
+//6.Create a function that will convert from Celsius to Fahrenheit
+const Celsius = 35;
+console.log(convertCelToFahr(Celsius));
+function convertCelToFahr(number){
+    let Fahrenheit = number * 1.8 + 32;
+    return Fahrenheit;
+}
