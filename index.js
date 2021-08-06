@@ -40,3 +40,10 @@ for(var i=1; i<=10; i+=1){
     const line = 7*i;
     console.log(`7 * ${i} = ${line}`); // `` (Back ticks are used for String Interpolation)
 }
+
+//5.Calculate 10!
+var fact = 1;
+for(var i=10; i>=1; i-=1){
+    fact = fact * i;
+}
+console.log(fact);
