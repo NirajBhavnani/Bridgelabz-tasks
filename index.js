@@ -63,3 +63,17 @@ for(var num in numArr){
     sum = sum + numArr[num];
 }
 console.log(sum);
+
+//8. Create a function that receives an array of numbers and returns an array containing only the positive numbers
+test = [10, 7, -2, 9, -4, -9];
+console.log(getArr(test));
+
+function getArr(sample){
+    newArr = [];
+    for(num in sample){
+        if(sample[num]>0){
+            (newArr).push(sample[num]);
+        }
+    }
+    return newArr;
+}
