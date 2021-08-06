@@ -87,3 +87,25 @@ for(x in maxArr){
     }
 }
 console.log(max);
+
+//10.Create a function that will return a Boolean specifying if a number is prime
+newNum = 7;
+console.log(isPrime(newNum));
+
+function isPrime(myNumber){
+    myBool = 1;
+    for(var i=2; i<=Math.sqrt(myNumber); i+=1){
+        // If n is divisible by any number between
+        // 2 and n/2, it is not prime
+        if(myNumber % i ==0){
+            var myBool = 0;
+        }
+    }
+    return Boolean(myBool);
+}
+
+// Why did we choose sqrt(N)? 
+// The reason is that the smallest and greater than one factor of a number 
+// cannot be more than the sqrt of N. And we stop as soon as we find a 
+// factor. For example, if N is 49, the smallest factor is 7. For 15, 
+// smallest factor is 3.
