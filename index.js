@@ -3,8 +3,8 @@ var str = "Hello Hi";
 var word_arr = str.split(" ");
 var final_ans = []
 
-for(var word in word_arr){
-    var adder = strReverse(word_arr[word]);
+for(var word in word_arr){ // Grabing each word from the input
+    var adder = strReverse(word_arr[word]); // Reversing each word
     final_ans.push(adder);
     var output = final_ans.join(" ");
 }
@@ -20,7 +20,7 @@ function strReverse(string){
 }
 
 //2.Print numbers from 1 to 10
-var nums = "";
+var nums = ""; // For printing in a single line
 for(var i=1; i<=10; i+=1){
     nums += i + " ";
 }
@@ -34,3 +34,9 @@ for(var i=1; i<=100; i+=1){
     }
 }
 console.log(odds);
+
+//4.Print the multiplication table with 7
+for(var i=1; i<=10; i+=1){
+    const line = 7*i;
+    console.log(`7 * ${i} = ${line}`); // `` (Back ticks are used for String Interpolation)
+}
