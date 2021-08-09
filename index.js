@@ -148,3 +148,17 @@ function animals(chic, cow, pig){
         return false;
     return (chic+cow+pig);
 }
+
+//Sort a number array
+var numbers = [1, 12, 2 ,23,77,7,33,5,99,234];
+var arr2 = numbers.sort(
+    function(a,b){
+        return a-b;//a-b for ascending, b-a for descending
+    }
+);
+console.log(arr2);
+
+//Check if the element is present or not
+names = ["Niraj", "Aditya", "Darshan", "Thejashree"];
+if(names.indexOf("Niraj")===-1) console.log("Element not present");
+console.log("Element present at index "+names.indexOf("Niraj"));
