@@ -162,3 +162,15 @@ console.log(arr2);
 names = ["Niraj", "Aditya", "Darshan", "Thejashree"];
 if(names.indexOf("Niraj")===-1) console.log("Element not present");
 console.log("Element present at index "+names.indexOf("Niraj"));
+
+//14. How do you find the missing number in a given integer array of 1 to 100? 
+var arr100 = [4, 9, 19, 38, 59, 78, 99];
+limit = 100;
+missing =[];
+
+for(var i=1; i<=limit; i+=1){
+    if(arr100.indexOf(i)===-1){
+        missing.push(i);
+    }
+}
+console.log(missing);
