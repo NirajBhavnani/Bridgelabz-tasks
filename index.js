@@ -119,3 +119,13 @@ function palindromeChecker(str){
     var revStr = lowerStr.split('').reverse().join('');
     return revStr ==lowerStr;
 }
+
+//12.Create a function that takes voltage and current and returns the calculated power.
+//example : circuitPower(230, 10) ➞ 2300
+var voltage = 500;
+var current = 15;
+console.log(circuitPower(voltage, current));
+
+function circuitPower(voltage, current){
+    return power = voltage * current;
+}
