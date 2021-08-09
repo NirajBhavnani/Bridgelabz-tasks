@@ -174,3 +174,17 @@ for(var i=1; i<=limit; i+=1){
     }
 }
 console.log(missing);
+
+//15.How do you find the largest and smallest number in an unsorted integer array? 
+var unsortArr = [76, 98, 3, 54, 17, 2];
+var unsortArrMin = unsortArr[0];
+var unsortArrMax = unsortArr[0];
+for(x in unsortArr){
+    if(unsortArrMax < unsortArr[x]){
+        unsortArrMax = unsortArr[x];
+    }
+    if(unsortArrMin > unsortArr[x]){
+        unsortArrMin = unsortArr[x];
+    }
+}
+console.log("Max: "+unsortArrMax+" Min: "+unsortArrMin);
