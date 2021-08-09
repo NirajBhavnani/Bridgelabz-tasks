@@ -188,3 +188,15 @@ for(x in unsortArr){
     }
 }
 console.log("Max: "+unsortArrMax+" Min: "+unsortArrMin);
+
+//16.How do you find all pairs of an integer array whose sum is equal to a given number? 
+reqSum = 16;
+pairArr = [4, 12, 8, 10, 5, 6];
+pairs = [];
+for(var i=0; i<pairArr.length; i++){
+    for(var j=1; j<pairArr.length; j++){
+        if(pairArr[i]+pairArr[j]===reqSum)
+            pairs.push([pairArr[i], pairArr[j]]);
+    }
+}
+console.log(pairs);
