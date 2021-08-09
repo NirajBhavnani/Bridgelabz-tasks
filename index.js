@@ -231,3 +231,32 @@ function checkDuplicate(arr){
         }
     }
 }
+
+//18.Find the Union and Intersection of the two sorted arrays
+testArr1 = [1, 3, 4, 5, 7];
+testArr2 = [3, 4];
+interArr = [];
+uniSet = [];
+getUnion(testArr1, testArr2);
+getIntersection(testArr2, uniSet);
+
+function getUnion(tA1, tA2){
+    tA = tA1.concat(tA2);
+    var mySet = new Set();
+    for(var i of tA){
+        mySet.add(i);
+    }
+    uniSet = [...mySet];
+    console.log("Union: "+uniSet.sort());
+}
+
+function getIntersection(tA2, uniSet){
+    for(i=0; i<uniSet.length; i++){
+        for(j=0; j<tA2.length; j++){
+            if(uniSet[i]==tA2[j]){
+                interArr.push(uniSet[i]);
+            }
+        }
+    }
+    console.log("Intersection: "+interArr);
+}
