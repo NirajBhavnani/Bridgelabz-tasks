@@ -109,3 +109,13 @@ function isPrime(myNumber){
 // cannot be more than the sqrt of N. And we stop as soon as we find a 
 // factor. For example, if N is 49, the smallest factor is 7. For 15, 
 // smallest factor is 3.
+
+//11.JAVASCRIPT PALINDROME CHECKER
+var palStr = "eye";
+console.log(palindromeChecker(palStr));
+
+function palindromeChecker(str){
+    var lowerStr = str.toLowerCase();
+    var revStr = lowerStr.split('').reverse().join('');
+    return revStr ==lowerStr;
+}
