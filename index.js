@@ -260,3 +260,84 @@ function getIntersection(tA2, uniSet){
     }
     console.log("Intersection: "+interArr);
 }
+
+//a) Write a program in the following steps
+// a. Generates 10 Random 3 Digit number.
+// b. Store this random numbers into a array.
+// c. Then find the 2nd largest and the 2nd smallest element without sorting the array.
+var ranArr = [];
+for(var num = 0; num<10 ; num++){
+    ranArr.push(Math.floor(Math.random()*(999-100+1)+100)); //return Math.floor(Math.random()*(max-min+1)+min);
+}
+console.log(ranArr);
+minMax(ranArr);
+function minMax(Arr){
+    var arrMin = Arr[0];
+    var arrMax = Arr[0];
+    for(x in Arr){
+        if(arrMax < Arr[x]){
+            arrMax = Arr[x];
+        }
+        if(arrMin > Arr[x]){
+            arrMin = Arr[x];
+        }
+    }
+    console.log("Min: "+arrMin);
+    console.log("Max: "+arrMax);
+}
+
+// b) Extend the above program to sort the array and then find the 2nd largest and the 2nd smallest element.
+var ranArr2 = [];
+for(var num = 0; num<10 ; num++){
+    ranArr2.push(Math.floor(Math.random()*(999-100+1)+100)); //return Math.floor(Math.random()*(max-min+1)+min);
+}
+console.log(ranArr2);
+mySort(ranArr2);
+
+function mySort(Arr){
+    Arr.sort(
+        function(a,b){
+            return b-a;//a-b for ascending, b-a for descending
+        }
+    );
+    console.log("2nd Max: "+Arr[1]);
+    console.log("2nd Min: "+Arr[8]);
+}
+
+// c) Extend the Prime Factorization Program to store all the Prime Factors of a number n into an array and finally display the output.
+var factorsArr = new Array();
+factors(9, factorsArr);
+function factors(num, Arr){
+    for(i=1; i<num/2; i++){
+        if(num%i ===0){
+            Arr.push(i);
+        }
+    }
+    console.log(`Factors of ${num}: ${Arr}`);
+}
+
+// d) Write a Program to show Sum of three Integer adds to ZERO
+zeroArr = [-1, 0, 1, 2, -3];
+find3Int(zeroArr);
+
+function find3Int(arr){
+    for (let i = 0; i < arr.length - 2; i++) {
+        for (let j = i + 1; j < arr.length - 1; j++) {
+            for (let k = j + 1; k < arr.length; k++) {
+                if (arr[i] + arr[j] + arr[k] === 0)
+                {
+                 console.log(`(${arr[i]}, ${arr[j]}, ${arr[k]})`);   
+                }
+            }
+        }
+}
+}
+
+// e) Take a range from 0 – 100, find the digits that are repeated twice like 33, 77, etc and store them in an array
+var Arr_11 = [];
+for(i=0; i<=100; i++){
+    if(i%11 ===0){
+        Arr_11.push(i);
+    }
+}
+console.log(Arr_11);
