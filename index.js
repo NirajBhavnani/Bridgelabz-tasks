@@ -341,3 +341,63 @@ for(i=0; i<=100; i++){
     }
 }
 console.log(Arr_11);
+
+// 1. Write a program in the following steps
+// a. Roll a die and find the number between 1 to 6
+// b. Repeat the Die roll and find the result each time
+// c. Store the result in a dictionary
+// d. Repeat till any one of the number has reached 10 times
+// e. Find the number that reached maximum times and the one that was for
+// minimum times
+
+myDice = new Map();
+myDice.set(1, 0);
+myDice.set(2, 0);
+myDice.set(3, 0);
+myDice.set(4, 0);
+myDice.set(5, 0);
+myDice.set(6, 0);
+
+while(true){
+    var numberVal = Math.floor(Math.random()*(6-1+1)+1);
+
+    //incrementing dice value to reach 10
+    myDice.set(numberVal, myDice.get(numberVal)+1);
+    if(myDice.get(numberVal)===10) break;
+}
+
+console.log(myDice);
+
+maxMap = Math.max(...myDice.values());
+minMap = Math.min(...myDice.values());
+maxMapArr = [];
+minMapArr = [];
+
+myDice.forEach((value, key) => {
+    if(value===maxMap){
+        maxMapArr.push(key);
+    }
+    if(value===minMap){
+        minMapArr.push(key);
+    }
+});
+
+console.log("Max reach: "+maxMapArr);
+console.log("Min reach: "+minMapArr);
+
+// 2. Write a Program to generate a birth month of 50 individuals
+// between the year 92 & 93. Find all the individuals having birthdays
+// in the same month. Store it to finally print.
+
+var bMap = new Map();
+var bMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+for(i=1; i<=50; i++){
+    bMap.set(i, bMonth[Math.floor(Math.random()*12)]);
+}
+console.log(bMap);
+
+var sameMap = new Map();
+bMonth.forEach(month => sameMap.set(month, []));
+bMap.forEach((value, key) => sameMap.set(value, [...sameMap.get(value), key]));
+console.log(sameMap);
